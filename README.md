@@ -30,6 +30,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
  link : https://www.smashingmagazine.com/2018/09/pwa-angular-6/
+ 
+  tutorial republic html 5
 
 
 
