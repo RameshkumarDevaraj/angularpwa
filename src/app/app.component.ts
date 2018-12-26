@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Item, AngularServiceService } from './angular-service.service';
+import { AngularServiceService } from './angular-service.service';
 import { MethodCall } from '@angular/compiler';
 
 @Component({
@@ -14,16 +14,17 @@ export class AppComponent implements OnInit {
   }
   title = 'AngularTestProject';
 
-
-  items:  Array<Item>;
+  items: any = [];
    constructor(  private servive:AngularServiceService){
       
    }
     mehtodCall()
     {
-       this.servive.fetch().subscribe((data:Array<Item>)=>
+       this.servive.fetch().subscribe(data=>
        {
-          this.items=data;
+          console.log("Data"+ data );
+          this.items=data.data;
+          console.log("item"+ this.items.data );
        },
        (err)=>{
           

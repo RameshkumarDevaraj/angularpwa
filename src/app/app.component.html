@@ -5,7 +5,7 @@
   </h1>
  </div>
 
- <mat-toolbar  color="primary">
+ <!-- <mat-toolbar  color="primary">
   <mat-toolbar-row>
   <span>JS-jargon</span>
   </mat-toolbar-row>
@@ -13,7 +13,7 @@
   <main>
   <mat-card *ngFor="let item of items">
   <mat-card-header>
-  <mat-card-title>{{item.name}}</mat-card-title>
+  <mat-card-title> {{user[item.field]}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
   {{item.description}}
@@ -22,5 +22,12 @@
   <a  mat-raised-button  href="{{item.url}}"  color="primary">More</a>
   </mat-card-actions>
   </mat-card>
-  </main>
-
+  </main> -->
+  <div *ngFor="let item of items " >
+    <h2> Symbol :  {{item.symbol | uppercase}}  Details</h2>
+    <div><span>Open: </span>{{item.open}}</div> 
+    <div><span>High: </span>{{item.high}}</div>
+    <div><span>DayEndClose: </span>{{item.dayEndClose}}</div> 
+   <div><span>Expiry  Date: </span>{{item.xDt | date}}</div> 
+   
+  </div> 
